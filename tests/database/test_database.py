@@ -7,12 +7,14 @@ def test_database_connection():
     db = Database()
     db.test_connection()
 
+
 @pytest.mark.database
 def test_check_all_users():
     db = Database()
     users = db.get_all_users()
 
     print(users)
+
 
 @pytest.mark.database
 def test_check_user_sergii():
@@ -23,6 +25,7 @@ def test_check_user_sergii():
     assert user[0][1] == 'Kyiv' 
     assert user[0][2] == '3127'
     assert user[0][3] == 'Ukraine'
+
 
 @pytest.mark.database
 def test_product_qnt_update():
@@ -41,6 +44,7 @@ def test_product_insert():
 
     assert water_qnt[0][0] == 30
 
+
 @pytest.mark.database
 def test_product_delete():
     db = Database()
@@ -49,6 +53,7 @@ def test_product_delete():
     qnt = db.select_product_qnt_by_id(99)
 
     assert len(qnt) == 0
+
 
 @pytest.mark.database
 def test_detailed_orders():
