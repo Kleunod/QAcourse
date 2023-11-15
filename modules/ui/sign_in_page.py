@@ -27,7 +27,7 @@ class SignInPage(BasePage):
         #We find the sign in button
         btn_elem = self.driver.find_element(By.NAME, "commit")
 
-        #Emulate a click with the left mouse button
+        #Emulate a click with the left mouse button 
         btn_elem.click()
 
     def check_title(self, expected_title):
