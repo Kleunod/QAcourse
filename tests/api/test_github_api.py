@@ -42,3 +42,9 @@ def test_emoji_list_not_empty(github_api):
 def test_commit_list_not_empty(github_api):
     commit_list = github_api.get_commit_list()
     assert len(commit_list) != 0
+
+
+@pytest.mark.api
+def test_first_commit_email(github_api):
+    commit_list = github_api.get_commit_list()
+    assert commit_list[0]['commit']['author']['email'] == 'kleunodlav@gmail.com'
