@@ -32,6 +32,8 @@ def test_repo_with_single_char_be_found(github_api):
     assert r['total_count'] != 0
 
 
+#This part of the code was for independent study 
+    #and was not part of the lecture material   
 @pytest.mark.api
 def test_emoji_list_not_empty(github_api):
     emojis_list = github_api.get_emojis_list()
